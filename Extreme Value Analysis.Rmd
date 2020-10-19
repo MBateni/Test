@@ -1,0 +1,206 @@
+---
+title: 'Extreme Value Analysis: precipitation extremes'
+author: "MMB"
+date: "19/10/2020"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Extremal types theorem
+
+Let $X_{1}, \cdots. X_{n} \overset{i.i.d.}{\sim} F$ and $M_{n} = max\left\{X_{1}, \cdots, X_{n}\right\}$. Then if there exist sequences of constants $a_{n}$ >0 and $b_{n}∈R$ such that, as $n→∞$.
+
+$$\mathbb{P}\left( \frac{M_{n}-b_{n}}{a_{n}} \leq x \right) \overset{d}{\rightarrow} G(x)$$
+for some non-degenerate distribution $G$, then $G$ takes the following form:
+$$G(x)=\exp\left \{ -\left( 1+\xi x \right)_{+}^{-\frac{1}{\xi}} \right\}
+$$
+
+
+where $x_{+}=\max(x,0)$ and $ξ$ is a shape parameter determining the rate of tail decay, with
+
+$ξ$ > 0 giving the heavy-tailed (`Frechet`) case
+
+$ξ$ = 0 giving the light-tailed (`Gumbel`) case
+
+$ξ$ < 0 giving the bounded-tailed (`Weibull`) case
+
+## Block Maxima Approach
+
+### Determine the block size and compute maxima for blocks
+
+`Data`: $X_{1}, X_{2}, \cdots, X_{nm}$ (e.g. daily precipitation).
+
+`Block maxima`: $M_{i} = max\{X_{(i-1)n+1}, \cdots, X_{in}\}, \, i = 1, \cdots, m$
+
+For example, if we take $n$=365 then we get `annual maxima` of daily precipitation of $m$ years.
+
+### Fit a GEV to the maxima and assess fit
+
+We assume  $M_{1}, \cdots, M_{m}$ follows a GEV distribution $GEV(\mu_{n}, \sigma_{n}, \xi)$ and we maximize the log-likelihood 
+
+$$-\sum_{i=1}^{m} y_{i}^{-\frac{1}{\xi}}-m log(\sigma) - (\frac{1}{\xi}+1)\sum_{i=1}^{m}log(y_{i})$$
+where $y_{i} = \left[1-\xi \frac{m_{i}-\mu}{\sigma}\right]_{+}$
+
+### Perform inference for return levels, probabilities, etc
+
+If we fit GEV to `annual maxima`, then the `r-year return level` is the value whose probability of exceedance is $p = \frac{1}{r}$ in any given year. 
+
+$$m_{p} = \left\{ \begin{array}{ll}
+\mu-\frac{\sigma}{\xi}\Big[1-\{-\log(1-p)^{-\xi}\}] \qquad \xi \neq 0;\\
+\mu-\sigma log(-log(1-p)) \qquad \xi = 0. \end{array} \right.$$
+## Fort Collins daily precipitation
+We analyze the daily precipitation amounts (inches) from a single rain gauge in Fort Collins, Colorado. (Source Colorado Climate Center, Colorado State University <http://ulysses.atmos.colostate.edu>).
+
+## Exploratory Data Analysis
+
+```{r setup_packages, include=TRUE}
+library(extRemes)
+data(FCwx)
+head(FCwx)
+```
+
+## Exploratory Data Analysis
+```{r exploratory, include=TRUE}
+t <- c(rep(1:365, 4)/365, rep(c((1:366)/366,
+          rep((1:365)/365, 3)), 24))
+plot(t + FCwx$Year, FCwx$Prec, type = "l",
+     xlab = "Year", ylab = "Daily Precip (0.01 in)")
+days_in_yr <- c(rep(365, 4), rep(c(366,
+          rep(365, 3)), 24))
+#Extract annual max precip
+annmax <- aggregate(FCwx$Prec, by = list(FCwx$Year), max)
+#Extract the timing of annual max
+annmax_t <- aggregate(FCwx$Prec, by = list(FCwx$Year), function(z){
+  which(z == max(z))[1]
+})
+max_t <- annmax_t[ ,2]/days_in_yr + 1900:1999
+points(max_t, annmax[ ,2], col = "blue", pch = 16,
+       cex = log(annmax[ ,2]/100 + 1))
+```
+
+## Fit GEV to Block Maxima  
+```{r BM, include=TRUE}
+gevfit1 <- fevd(annmax[ ,2])
+gevfit1
+#Diagnostic plots
+plot(gevfit1)
+```
+
+Suppose we are interested in estimating 50-year return level
+```{r evd, include=TRUE}
+library(evd)
+CI_delta <- ci(gevfit1, return.period = 50, verbose = T) 
+CI_delta
+CI_prof <- ci(gevfit1, method="proflik", xrange = c(300, 600),
+   return.period = 50, verbose = TRUE)
+CI_prof 
+hist(annmax[ ,2], 15, col = "lightblue",
+     xlim = c(0, 600), prob = T, ylim = c(0, 0.01),
+     xlab = "annual max (0.01 in)",
+     main = "95% CI for 50-yr RL")
+xg <- seq(0, 600, len = 1000)
+mle <- gevfit1$results$par
+lines(xg, dgev(xg, loc = mle[1], 
+               scale = mle[2], shape = mle[3]))
+for (i in 1:3) abline(v = CI_delta[i], lty = 2, col = "blue")
+for (i in 1:3) abline(v = CI_prof[i], lty = 3, col = "red")
+legend("topleft", legend = c("Delta", "Prof"),
+       col = c("blue", "red"), lty = c(2, 3))
+```
+## Temporal nonstationarity (in annual max)?
+```{r nonstationarity_evd, include=TRUE}
+gevfit2 <- fevd(annmax[ ,2], data = annmax,
+ location.fun = ~annmax[ ,1])
+lr.test(gevfit1, gevfit2)
+```
+# Peak Over Threshold Approach
+
+If $M_i$ is approximately $GEV(\mu, \sigma, \xi)$, then, for a large $u$
+$$\mathbb{P}\left(X_{i}-u > y| X_{i} >u\right) \approx \left(1+\xi \frac{y}{\tilde{\sigma}}\right)_{+}^{-\frac{1}{\xi}}$$
+  When $\tilde{\sigma} = \sigma + \xi(u - \mu)$ and $y>0$. 
+  It is the survival function for the `Generaliaze Pareto distribution` (GPD)
+  ```{r pot, include=TRUE}
+plot(1:36524, FCwx$Prec, type = "l",
+     xlab = "Year", ylab = "Daily Precip (0.01 in)",
+     xaxt = "n")
+yr <- c(rep(365, 3), rep(c(366, 365, 365, 365), 24))
+axis(1, at = cumsum(yr)[seq(1, 100, len = 10)], 
+     label = seq(1, 100, len = 10) + 1900)
+#Threshold exceedances
+thres <- 40
+ex <- FCwx$Prec[FCwx$Prec >= thres]
+#Extract the timing of POT
+ex_t <- which(FCwx$Prec >= 40)
+abline(h = 40, col = "blue", lty = 2)
+points(ex_t, ex, col = "blue", pch = 16,
+       cex = log(ex/100 + 1))
+       ```
+## Fit GPD to Threshold Exceedances
+### How to choose the threshold?
+
+
+```{r pot_plot, include=TRUE}
+mrlplot(FCwx$Prec)
+threshrange.plot(x = FCwx$Prec, r = c(20, 60))
+gpdfit1 <- fevd(FCwx$Prec, threshold = 40, type = "GP")
+gpdfit1
+plot(gpdfit1)
+```
+
+Again we are interested in estimating 50-year return level
+```{r RP, include=TRUE}
+CI_delta <- ci(gpdfit1, return.period = 50, verbose = T)
+CI_delta
+CI_prof <- ci(gpdfit1, method="proflik", xrange = c(300, 600),
+   return.period = 50, verbose = TRUE)
+CI_prof
+hist(ex, 50, col = "lightblue",
+     xlim = c(40, 600), prob = T, ylim = c(0, 0.033),
+     xlab = "Threshold excess (0.01 in)",
+     main = "95% CI for 50-yr RL")
+xg <- seq(40, 600, len = 1000)
+mle <- gpdfit1$results$par
+lines(xg, dgpd(xg, loc = 40, 
+               scale = mle[1], shape = mle[2]))
+for (i in 1:3) abline(v = CI_delta[i], lty = 2, col = "blue")
+for (i in 1:3) abline(v = CI_prof[i], lty = 3, col = "red")
+legend("topleft", legend = c("Delta", "Prof"),
+       col = c("blue", "red"), lty = c(2, 3))
+```
+### Decluster the exceedances
+```{r Decluster, include=TRUE}
+plot(366:730, FCwx$Prec[366:730], type = "l",
+     xlab = "Time", ylab = "Daily Precip (0.01 in)",
+     main = "1900")
+thres <- 40
+ex <- FCwx$Prec[FCwx$Prec >= thres]
+#Extract the timing of POT
+ex_t <- which(FCwx$Prec >= 40)
+abline(h = 40, col = "blue", lty = 2)
+points(ex_t, ex, col = "blue", pch = 16,
+       cex = log(ex/100 + 1))
+####
+declus <- decluster(FCwx$Prec, threshold = 40)
+plot(declus)
+gpdfit2 <- fevd(declus, threshold = 40, type = "GP")
+CI_delta <- ci(gpdfit2, return.period = 50, verbose = T)
+CI_delta
+CI_prof <- ci(gpdfit2, method="proflik", xrange = c(300, 600),
+   return.period = 50, verbose = TRUE)
+CI_prof
+hist(ex, 50, col = "lightblue",
+     xlim = c(40, 600), prob = T, ylim = c(0, 0.033),
+     xlab = "Threshold excess (0.01 in)",
+     main = "95% CI for 50-yr RL")
+xg <- seq(40, 600, len = 1000)
+mle <- gpdfit2$results$par
+lines(xg, dgpd(xg, loc = 40, 
+               scale = mle[1], shape = mle[2]))
+for (i in 1:3) abline(v = CI_delta[i], lty = 2, col = "blue")
+for (i in 1:3) abline(v = CI_prof[i], lty = 3, col = "red")
+legend("topleft", legend = c("Delta", "Prof"),
+       col = c("blue", "red"), lty = c(2, 3))
+```

@@ -1,0 +1,293 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+<Document id="root_doc">
+<Schema name="Isfahan" id="Isfahan">
+	<SimpleField name="Google Map" type="string"></SimpleField>
+	<SimpleField name="Location" type="string"></SimpleField>
+	<SimpleField name="Published" type="string"></SimpleField>
+	<SimpleField name="Title" type="string"></SimpleField>
+	<SimpleField name="Updated" type="string"></SimpleField>
+</Schema>
+<Folder><name>Isfahan</name>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#Isfahan">
+		<SimpleData name="Google Map">http://maps.google.com/?q=32.62352939487224,51.62321526557207</SimpleData>
+		<SimpleData name="Location">{ &quot;Geo Coordinates&quot;: { &quot;Latitude&quot;: &quot;32.6235294&quot;, &quot;Longitude&quot;: &quot;51.6232153&quot; } }</SimpleData>
+		<SimpleData name="Published">2019/04/24 11:27:39.000</SimpleData>
+		<SimpleData name="Title">NOName</SimpleData>
+		<SimpleData name="Updated">2019/04/24 11:27:39.000</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>51.6232153,32.6235294</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#Isfahan">
+		<SimpleData name="Google Map">http://maps.google.com/?q=32.668386,51.683607</SimpleData>
+		<SimpleData name="Location">{ &quot;Geo Coordinates&quot;: { &quot;Latitude&quot;: &quot;32.6683863&quot;, &quot;Longitude&quot;: &quot;51.6836066&quot; } }</SimpleData>
+		<SimpleData name="Published">2016/08/06 22:01:27.000</SimpleData>
+		<SimpleData name="Title">NOName</SimpleData>
+		<SimpleData name="Updated">2018/12/19 06:39:53.000</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>51.6836066,32.6683863</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#Isfahan">
+		<SimpleData name="Google Map">http://maps.google.com/?q=32.62791606023264,51.68654892593623</SimpleData>
+		<SimpleData name="Location">{ &quot;Geo Coordinates&quot;: { &quot;Latitude&quot;: &quot;32.6279161&quot;, &quot;Longitude&quot;: &quot;51.6865489&quot; } }</SimpleData>
+		<SimpleData name="Published">2018/08/16 06:18:57.000</SimpleData>
+		<SimpleData name="Title">NOName</SimpleData>
+		<SimpleData name="Updated">2018/08/16 06:18:57.000</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>51.6865489,32.6279161</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#Isfahan">
+		<SimpleData name="Google Map">http://maps.google.com/?q=32.627869752175,51.686643809080124</SimpleData>
+		<SimpleData name="Location">{ &quot;Geo Coordinates&quot;: { &quot;Latitude&quot;: &quot;32.6278698&quot;, &quot;Longitude&quot;: &quot;51.6866438&quot; } }</SimpleData>
+		<SimpleData name="Published">2017/11/17 13:42:21.000</SimpleData>
+		<SimpleData name="Title">NOName</SimpleData>
+		<SimpleData name="Updated">2017/11/17 13:42:21.000</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>51.6866438,32.6278698</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#Isfahan">
+		<SimpleData name="Google Map">http://maps.google.com/?q=32.657184,51.674279</SimpleData>
+		<SimpleData name="Location">{ &quot;Geo Coordinates&quot;: { &quot;Latitude&quot;: &quot;32.6571844&quot;, &quot;Longitude&quot;: &quot;51.6742795&quot; } }</SimpleData>
+		<SimpleData name="Published">2016/08/06 20:46:25.000</SimpleData>
+		<SimpleData name="Title">NOName</SimpleData>
+		<SimpleData name="Updated">2017/08/18 05:58:55.000</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>51.6742795,32.6571844</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#Isfahan">
+		<SimpleData name="Google Map">http://maps.google.com/?q=32.658038,51.678576</SimpleData>
+		<SimpleData name="Location">{ &quot;Geo Coordinates&quot;: { &quot;Latitude&quot;: &quot;32.6580383&quot;, &quot;Longitude&quot;: &quot;51.6785764&quot; } }</SimpleData>
+		<SimpleData name="Published">2016/08/06 21:54:42.000</SimpleData>
+		<SimpleData name="Title">NOName</SimpleData>
+		<SimpleData name="Updated">2017/02/20 05:18:38.000</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>51.6785764,32.6580383</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#Isfahan">
+		<SimpleData name="Google Map">http://maps.google.com/?q=32.655493,51.678531</SimpleData>
+		<SimpleData name="Location">{ &quot;Geo Coordinates&quot;: { &quot;Latitude&quot;: &quot;32.6554933&quot;, &quot;Longitude&quot;: &quot;51.6785315&quot; } }</SimpleData>
+		<SimpleData name="Published">2016/08/06 21:59:38.000</SimpleData>
+		<SimpleData name="Title">NOName</SimpleData>
+		<SimpleData name="Updated">2017/02/19 05:19:04.000</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>51.6785315,32.6554933</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#Isfahan">
+		<SimpleData name="Google Map">http://maps.google.com/?q=32.660114,51.678596</SimpleData>
+		<SimpleData name="Location">{ &quot;Geo Coordinates&quot;: { &quot;Latitude&quot;: &quot;32.6601136&quot;, &quot;Longitude&quot;: &quot;51.6785959&quot; } }</SimpleData>
+		<SimpleData name="Published">2016/08/06 21:55:51.000</SimpleData>
+		<SimpleData name="Title">NOName</SimpleData>
+		<SimpleData name="Updated">2017/02/19 05:19:04.000</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>51.6785959,32.6601136</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#Isfahan">
+		<SimpleData name="Google Map">http://maps.google.com/?q=32.650497,51.594018</SimpleData>
+		<SimpleData name="Location">{ &quot;Geo Coordinates&quot;: { &quot;Latitude&quot;: &quot;32.6504974&quot;, &quot;Longitude&quot;: &quot;51.5940177&quot; } }</SimpleData>
+		<SimpleData name="Published">2016/08/06 21:14:33.000</SimpleData>
+		<SimpleData name="Title">NOName</SimpleData>
+		<SimpleData name="Updated">2017/01/23 05:22:38.000</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>51.5940177,32.6504974</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#Isfahan">
+		<SimpleData name="Google Map">http://maps.google.com/?q=32.654145,51.686572</SimpleData>
+		<SimpleData name="Location">{ &quot;Geo Coordinates&quot;: { &quot;Latitude&quot;: &quot;32.6541454&quot;, &quot;Longitude&quot;: &quot;51.6865724&quot; } }</SimpleData>
+		<SimpleData name="Published">2016/08/06 20:44:30.000</SimpleData>
+		<SimpleData name="Title">NOName</SimpleData>
+		<SimpleData name="Updated">2016/11/24 05:20:38.000</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>51.6865724,32.6541454</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#Isfahan">
+		<SimpleData name="Google Map">http://maps.google.com/?q=32.640891,51.608683</SimpleData>
+		<SimpleData name="Location">{ &quot;Geo Coordinates&quot;: { &quot;Latitude&quot;: &quot;32.6408907&quot;, &quot;Longitude&quot;: &quot;51.6086834&quot; } }</SimpleData>
+		<SimpleData name="Published">2016/08/06 21:13:44.000</SimpleData>
+		<SimpleData name="Title">NOName</SimpleData>
+		<SimpleData name="Updated">2016/09/17 05:19:44.000</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>51.6086834,32.6408907</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#Isfahan">
+		<SimpleData name="Google Map">http://maps.google.com/?cid=5085218659322876973</SimpleData>
+		<SimpleData name="Location">{ &quot;Address&quot;: &quot;Isfahan Province, Isfahan, Majlesi St, Iran&quot;, &quot;Business Name&quot;: &quot;Haaj Mahmoud Shefa'at Beryani&quot;, &quot;Country Code&quot;: &quot;IR&quot;, &quot;Geo Coordinates&quot;: { &quot;Latitude&quot;: &quot;32.6677316&quot;, &quot;Longitude&quot;: &quot;51.6837148&quot; } }</SimpleData>
+		<SimpleData name="Published">2016/08/11 20:49:40.000</SimpleData>
+		<SimpleData name="Title">Haj Mahmud Beryani Restaurant</SimpleData>
+		<SimpleData name="Updated">2016/08/11 20:49:40.000</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>51.6837148,32.6677316</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#Isfahan">
+		<SimpleData name="Google Map">http://maps.google.com/?cid=4799926208958712995</SimpleData>
+		<SimpleData name="Location">{ &quot;Address&quot;: &quot;Isfahan استان اصفهان، اصفهان،، Hakim St, Iran&quot;, &quot;Business Name&quot;: &quot;Malek Soltan Jarchibashi Restaurant&quot;, &quot;Country Code&quot;: &quot;IR&quot;, &quot;Geo Coordinates&quot;: { &quot;Latitude&quot;: &quot;32.6636314&quot;, &quot;Longitude&quot;: &quot;51.6751593&quot; } }</SimpleData>
+		<SimpleData name="Published">2016/08/06 21:54:30.000</SimpleData>
+		<SimpleData name="Title">Malek Soltan Jarchibashi Restaurant</SimpleData>
+		<SimpleData name="Updated">2016/08/06 21:54:30.000</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>51.6751593,32.6636314</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#Isfahan">
+		<SimpleData name="Google Map">http://maps.google.com/?cid=15145340476187742832</SimpleData>
+		<SimpleData name="Location">{ &quot;Address&quot;: &quot;Isfahan, Iran&quot;, &quot;Business Name&quot;: &quot;Mukhlis market&quot;, &quot;Country Code&quot;: &quot;IR&quot;, &quot;Geo Coordinates&quot;: { &quot;Latitude&quot;: &quot;32.6608774&quot;, &quot;Longitude&quot;: &quot;51.6787450&quot; } }</SimpleData>
+		<SimpleData name="Published">2016/08/06 21:26:23.000</SimpleData>
+		<SimpleData name="Title">Bazar-e-Mokhles</SimpleData>
+		<SimpleData name="Updated">2016/08/06 21:26:23.000</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>51.678745,32.6608774</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#Isfahan">
+		<SimpleData name="Google Map">http://maps.google.com/?cid=3670788429162923240</SimpleData>
+		<SimpleData name="Location">{ &quot;Address&quot;: &quot;Isfahan Province, Isfahan, Chahar Bagh e Abbasi St, Iran&quot;, &quot;Business Name&quot;: &quot;Chahar Bagh Theological School&quot;, &quot;Country Code&quot;: &quot;IR&quot;, &quot;Geo Coordinates&quot;: { &quot;Latitude&quot;: &quot;32.6516917&quot;, &quot;Longitude&quot;: &quot;51.6691018&quot; } }</SimpleData>
+		<SimpleData name="Published">2016/08/06 21:12:37.000</SimpleData>
+		<SimpleData name="Title">Chahar Bagh Theological School</SimpleData>
+		<SimpleData name="Updated">2016/08/06 21:12:37.000</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>51.6691018,32.6516917</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#Isfahan">
+		<SimpleData name="Google Map">http://maps.google.com/?cid=11800232760702803491</SimpleData>
+		<SimpleData name="Location">{ &quot;Address&quot;: &quot;Isfahan انتهای رنگرزان، Hakim Nezami St, Iran&quot;, &quot;Business Name&quot;: &quot;Hakim Mosque&quot;, &quot;Country Code&quot;: &quot;IR&quot;, &quot;Geo Coordinates&quot;: { &quot;Latitude&quot;: &quot;32.6632328&quot;, &quot;Longitude&quot;: &quot;51.6746577&quot; } }</SimpleData>
+		<SimpleData name="Published">2016/08/06 21:09:54.000</SimpleData>
+		<SimpleData name="Title">Hakim Mosque</SimpleData>
+		<SimpleData name="Updated">2016/08/06 21:09:54.000</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>51.6746577,32.6632328</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#Isfahan">
+		<SimpleData name="Google Map">http://maps.google.com/?cid=2585789585744420373</SimpleData>
+		<SimpleData name="Location">{ &quot;Address&quot;: &quot;Isfahan, Isfahan Province, Iran&quot;, &quot;Business Name&quot;: &quot;Ali Mosque&quot;, &quot;Country Code&quot;: &quot;IR&quot;, &quot;Geo Coordinates&quot;: { &quot;Latitude&quot;: &quot;32.6653841&quot;, &quot;Longitude&quot;: &quot;51.6829943&quot; } }</SimpleData>
+		<SimpleData name="Published">2016/08/06 21:08:26.000</SimpleData>
+		<SimpleData name="Title">Ali Mosque</SimpleData>
+		<SimpleData name="Updated">2016/08/06 21:08:26.000</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>51.6829943,32.6653841</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#Isfahan">
+		<SimpleData name="Google Map">http://maps.google.com/?cid=14866323272344729172</SimpleData>
+		<SimpleData name="Location">{ &quot;Address&quot;: &quot;Isfahan Province, Isfahan, Middli Nazar St.-Tohid St., Tohid St, No. Middli Nazar St., Iran&quot;, &quot;Business Name&quot;: &quot;Bethlehem Church&quot;, &quot;Country Code&quot;: &quot;IR&quot;, &quot;Geo Coordinates&quot;: { &quot;Latitude&quot;: &quot;32.6365473&quot;, &quot;Longitude&quot;: &quot;51.6578292&quot; } }</SimpleData>
+		<SimpleData name="Published">2016/08/06 21:07:35.000</SimpleData>
+		<SimpleData name="Title">Bedkhem Church</SimpleData>
+		<SimpleData name="Updated">2016/08/06 21:07:35.000</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>51.6578292,32.6365473</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#Isfahan">
+		<SimpleData name="Google Map">http://maps.google.com/?q=Isfahan,+Middle+Nazar+St,+Jolfa+Square&amp;ftid=0x3fbc367402e90973:0x3e09b0ca30cef817</SimpleData>
+		<SimpleData name="Location">{ &quot;Geo Coordinates&quot;: { &quot;Latitude&quot;: &quot;32.6363184&quot;, &quot;Longitude&quot;: &quot;51.6572073&quot; } }</SimpleData>
+		<SimpleData name="Published">2016/08/06 21:06:02.000</SimpleData>
+		<SimpleData name="Title">Jolfa Square</SimpleData>
+		<SimpleData name="Updated">2016/08/06 21:06:02.000</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>51.6572073,32.6363184</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#Isfahan">
+		<SimpleData name="Google Map">http://maps.google.com/?cid=15765021727526833608</SimpleData>
+		<SimpleData name="Location">{ &quot;Address&quot;: &quot;Isfahan Province, Isfahan, Masjed Seyyed St, Iran&quot;, &quot;Business Name&quot;: &quot;Seyed Mosque&quot;, &quot;Country Code&quot;: &quot;IR&quot;, &quot;Geo Coordinates&quot;: { &quot;Latitude&quot;: &quot;32.6648732&quot;, &quot;Longitude&quot;: &quot;51.6637705&quot; } }</SimpleData>
+		<SimpleData name="Published">2016/08/06 21:05:13.000</SimpleData>
+		<SimpleData name="Title">Seyed Mosque</SimpleData>
+		<SimpleData name="Updated">2016/08/06 21:05:13.000</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>51.6637705,32.6648732</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#Isfahan">
+		<SimpleData name="Google Map">http://maps.google.com/?cid=5867411465666416424</SimpleData>
+		<SimpleData name="Location">{ &quot;Address&quot;: &quot;Isfahan Province, Isfahan, Lonban St, No. مجتمع فنی داودی, Iran&quot;, &quot;Business Name&quot;: &quot;Lonban Mosque&quot;, &quot;Country Code&quot;: &quot;IR&quot;, &quot;Geo Coordinates&quot;: { &quot;Latitude&quot;: &quot;32.6511111&quot;, &quot;Longitude&quot;: &quot;51.6522222&quot; } }</SimpleData>
+		<SimpleData name="Published">2016/08/06 21:04:52.000</SimpleData>
+		<SimpleData name="Title">Lonban Mosque</SimpleData>
+		<SimpleData name="Updated">2016/08/06 21:04:52.000</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>51.6522222,32.6511111</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#Isfahan">
+		<SimpleData name="Google Map">http://maps.google.com/?q=Isfahan,+Tohid+St,+Saint+Mary+Church&amp;ftid=0x3fbc3673f3f0b5ab:0xada3455e11f01341</SimpleData>
+		<SimpleData name="Location">{ &quot;Geo Coordinates&quot;: { &quot;Latitude&quot;: &quot;32.6358157&quot;, &quot;Longitude&quot;: &quot;51.6581127&quot; } }</SimpleData>
+		<SimpleData name="Published">2016/08/06 21:02:23.000</SimpleData>
+		<SimpleData name="Title">Saint Mary Church</SimpleData>
+		<SimpleData name="Updated">2016/08/06 21:02:23.000</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>51.6581127,32.6358157</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#Isfahan">
+		<SimpleData name="Google Map">http://maps.google.com/?q=32.658074000000006,51.674147999999995</SimpleData>
+		<SimpleData name="Location">{ &quot;Geo Coordinates&quot;: { &quot;Latitude&quot;: &quot;32.6580740&quot;, &quot;Longitude&quot;: &quot;51.6741480&quot; } }</SimpleData>
+		<SimpleData name="Published">2016/08/06 21:01:08.000</SimpleData>
+		<SimpleData name="Title">NOName</SimpleData>
+		<SimpleData name="Updated">2016/08/06 21:01:08.000</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>51.674148,32.658074</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#Isfahan">
+		<SimpleData name="Google Map">http://maps.google.com/?cid=13493685901792323875</SimpleData>
+		<SimpleData name="Location">{ &quot;Address&quot;: &quot;Isfahan Province, Isfahan, Kamal Street، Iran&quot;, &quot;Business Name&quot;: &quot;Sarban Minaret&quot;, &quot;Country Code&quot;: &quot;IR&quot;, &quot;Geo Coordinates&quot;: { &quot;Latitude&quot;: &quot;32.6710794&quot;, &quot;Longitude&quot;: &quot;51.6933265&quot; } }</SimpleData>
+		<SimpleData name="Published">2016/08/06 20:57:39.000</SimpleData>
+		<SimpleData name="Title">Sarban Minaret</SimpleData>
+		<SimpleData name="Updated">2016/08/06 20:57:39.000</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>51.6933265,32.6710794</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#Isfahan">
+		<SimpleData name="Google Map">http://maps.google.com/?q=Esfahan+Bazaar,+Isfahan&amp;ftid=0x3fbc35f1124cc723:0x9edf02582a6cfe21</SimpleData>
+		<SimpleData name="Location">{ &quot;Geo Coordinates&quot;: { &quot;Latitude&quot;: &quot;32.6608048&quot;, &quot;Longitude&quot;: &quot;51.6761408&quot; } }</SimpleData>
+		<SimpleData name="Published">2016/08/06 20:56:59.000</SimpleData>
+		<SimpleData name="Title">Esfahan Bazaar, Isfahan</SimpleData>
+		<SimpleData name="Updated">2016/08/06 20:56:59.000</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>51.6761408,32.6608048</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#Isfahan">
+		<SimpleData name="Google Map">http://maps.google.com/?cid=11993827631893372772</SimpleData>
+		<SimpleData name="Location">{ &quot;Address&quot;: &quot;Isfahan, Isfahan Province, Iran&quot;, &quot;Business Name&quot;: &quot;Chehel Dokhtaran&quot;, &quot;Country Code&quot;: &quot;IR&quot;, &quot;Geo Coordinates&quot;: { &quot;Latitude&quot;: &quot;32.6733790&quot;, &quot;Longitude&quot;: &quot;51.6943538&quot; } }</SimpleData>
+		<SimpleData name="Published">2016/08/06 20:46:56.000</SimpleData>
+		<SimpleData name="Title">Chehel Dokhtaran</SimpleData>
+		<SimpleData name="Updated">2016/08/06 20:46:56.000</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>51.6943538,32.673379</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#Isfahan">
+		<SimpleData name="Google Map">http://maps.google.com/?q=Amin's+House,+Isfahan&amp;ftid=0x3fbc3592e9b5de0f:0x8d66ed0845c7c4c0</SimpleData>
+		<SimpleData name="Location">{ &quot;Geo Coordinates&quot;: { &quot;Latitude&quot;: &quot;32.6661850&quot;, &quot;Longitude&quot;: &quot;51.6710970&quot; } }</SimpleData>
+		<SimpleData name="Published">2016/08/06 20:45:07.000</SimpleData>
+		<SimpleData name="Title">Amin's House</SimpleData>
+		<SimpleData name="Updated">2016/08/06 20:45:07.000</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>51.671097,32.666185</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#Isfahan">
+		<SimpleData name="Google Map">http://maps.google.com/?cid=16475524953917749206</SimpleData>
+		<SimpleData name="Location">{ &quot;Address&quot;: &quot;Isfahan Province, Isfahan, Bid Abadi St, Iran&quot;, &quot;Business Name&quot;: &quot;Ali Gholi Agha Historical Bath&quot;, &quot;Country Code&quot;: &quot;IR&quot;, &quot;Geo Coordinates&quot;: { &quot;Latitude&quot;: &quot;32.6682420&quot;, &quot;Longitude&quot;: &quot;51.6673730&quot; } }</SimpleData>
+		<SimpleData name="Published">2016/08/06 20:39:41.000</SimpleData>
+		<SimpleData name="Title">Ali Gholi Agha Hammam</SimpleData>
+		<SimpleData name="Updated">2016/08/06 20:39:41.000</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>51.667373,32.668242</coordinates></Point>
+  </Placemark>
+</Folder>
+</Document></kml>
